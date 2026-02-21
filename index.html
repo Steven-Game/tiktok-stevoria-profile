@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Space Profile</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background: radial-gradient(circle at top, #1a1a40, #0f0f1a, #000000);
+        }
+
+        .container {
+            animation: fadeIn 1.5s ease;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .profile-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .profile-box img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            text-align: left;
+        }
+
+        .profile-info h2 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .profile-info a {
+            color: #7f5cff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .profile-info a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1 id="welcomeText">Welcome</h1>
+
+    <div class="profile-box">
+        <img src="tiktok.jpeg" alt="TikTok Profile">
+        <div class="profile-info">
+            <h2>@username</h2>
+            <a href="https://tiktok.com/@mikirsebentar.id" target="_blank">Visit TikTok</a>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    let email = "antoniussteveng@gmail.com";
+
+    let username = email.split("@")[0];
+
+    let nama = username.charAt(0).toUpperCase() + username.slice(1);
+
+    document.getElementById("welcomeText").innerText = "Welcome, " + nama;
+
+</script>
+
+</body>
+</html>
