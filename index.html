@@ -80,7 +80,7 @@
     <div class="profile-box">
         <img src="tiktok.jpeg" alt="TikTok Profile">
         <div class="profile-info">
-            <h2>@username</h2>
+            <h2>@Stevoria</h2>
             <a href="https://tiktok.com/@mikirsebentar.id" target="_blank">Visit TikTok</a>
         </div>
     </div>
@@ -92,7 +92,7 @@
 
     let username = email.split("@")[0];
 
-    let nama = username.charAt(0).toUpperCase() + username.slice(1);
+    let nama = username.match(/[A-Z]?[a-z]+/g[0];)
 
     document.getElementById("welcomeText").innerText = "Welcome, " + nama;
 
